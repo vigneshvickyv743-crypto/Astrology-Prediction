@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // SEND TO N8N
     try {
-      const webhookUrl = "https://ramsankar.app.n8n.cloud/webhook/astro-form";
+      const webhookUrl = "https://vigneshtvk.app.n8n.cloud/webhook/astro-form";
 
       const response = await fetch(webhookUrl, {
         method: "POST",
@@ -88,5 +88,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+
 
 
