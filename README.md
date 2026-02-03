@@ -43,7 +43,7 @@ The frontend HTML form collects:
 JavaScript sends this data to the n8n Webhook:
 
 ```js
-fetch("https://ramsankar.app.n8n.cloud/webhook/astro-form", {
+fetch("https://vigneshtvk.app.n8n.cloud//webhook/astro-form", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify(formData)
