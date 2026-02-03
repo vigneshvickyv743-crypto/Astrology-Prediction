@@ -122,4 +122,4 @@ Limitations
 
 # Check out website:
 
-https://ai-astrology-prediction.netlify.app/
+https://astro-prediction.netlify.app/
