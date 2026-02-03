@@ -20,8 +20,7 @@ body {
   min-height: 100vh;
 
   background-image:
-    linear-gradient(rgba(5, 5, 25, 0.35), rgba(5, 5, 25, 0.35)),
-    url("bg_img.jpg");
+    linear-gradient(rgba(5, 5, 25, 0.35), rgba(5, 5, 25, 0.35));
 
   background-size: cover;
   background-position: center;
@@ -185,3 +184,4 @@ select::-ms-expand {
 
 .form-messages.success { color: #a8ffb3; }
 .form-messages.error { color: var(--error); }
+
