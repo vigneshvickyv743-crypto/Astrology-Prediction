@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI Astrology Insight Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <main class="page">
+
+    <section class="card">
+      <h1>AI Astrology Prediction</h1>
+      <p class="subtitle">
+        Enter your birth details and ask your question to receive a personalized AI-generated astrological reading.
+      </p>
+
+      <form id="astro-form" novalidate>
+
+        <div class="form-group">
+          <label for="fullName">Full Name <span class="required">*</span></label>
+          <input type="text" id="fullName" name="fullName" required />
+          <small class="error-message" data-error-for="fullName"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="dob">Date of Birth <span class="required">*</span></label>
+          <input type="date" id="dob" name="dob" required />
+          <small class="error-message" data-error-for="dob"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="tob">Time of Birth <span class="required">*</span></label>
+          <input type="time" id="tob" name="tob" required />
+          <small class="error-message" data-error-for="tob"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="pob">Place of Birth <span class="required">*</span></label>
+          <input type="text" id="pob" name="pob" required />
+          <small class="error-message" data-error-for="pob"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="gender">Gender <span class="required">*</span></label>
+          <select id="gender" name="gender" required>
+            <option value="">Select your gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="nonbinary">Non-binary</option>
+            <option value="other">Other</option>
+          </select>
+          <small class="error-message" data-error-for="gender"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="focus">Focus Area <span class="required">*</span></label>
+          <select id="focus" name="focus" required>
+            <option value="">Select area</option>
+            <option value="career">Career</option>
+            <option value="relationships">Relationships</option>
+            <option value="finance">Finance</option>
+            <option value="health">Health</option>
+            <option value="personal-growth">Personal Growth</option>
+            <option value="general">General Life Direction</option>
+          </select>
+          <small class="error-message" data-error-for="focus"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email <span class="required">*</span></label>
+          <input type="email" id="email" name="email" required />
+          <small class="error-message" data-error-for="email"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="notes">Your Question for the AI <span class="required">*</span></label>
+          <textarea id="notes" name="notes" rows="3" required></textarea>
+          <small class="error-message" data-error-for="notes"></small>
+        </div>
+
+        <div class="form-group">
+          <label class="checkbox-container">
+            <input type="checkbox" id="agree" name="agree" required />
+            <span>I understand this is an AI-generated reading and not professional advice.</span>
+          </label>
+          <small class="error-message" data-error-for="agree"></small>
+        </div>
+
+        <div id="form-messages" class="form-messages"></div>
+
+        <button type="submit" class="btn-primary">Get My Insight</button>
+
+      </form>
+
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

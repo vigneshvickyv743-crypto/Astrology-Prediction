@@ -1,0 +1,187 @@
+:root {
+  --overlay: rgba(5, 5, 25, 0.65);
+  --card-bg: rgba(15, 15, 35, 0.55);
+  --accent: #d5c3ff;
+  --accent-glow: rgba(213, 195, 255, 0.4);
+  --text-main: #ffffff;
+  --text-muted: #c8b7e6;
+  --error: #ff6b8a;
+  --border: rgba(255, 255, 255, 0.22);
+  --radius-lg: 20px;
+  --radius-md: 12px;
+  --shadow-soft: 0 25px 55px rgba(0, 0, 0, 0.55);
+  --font-main: "Segoe UI", system-ui, sans-serif;
+}
+
+/* Background */
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  min-height: 100vh;
+
+  background-image:
+    linear-gradient(rgba(5, 5, 25, 0.35), rgba(5, 5, 25, 0.35)),
+    url("bg_img.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--text-main);
+}
+
+/* Center content */
+.page {
+  display: flex;
+  justify-content: center;
+  padding: 40px 16px;
+}
+
+/* Card */
+.card {
+  width: 100%;
+  max-width: 650px;
+  padding: 38px 30px;
+
+  background: rgba(10, 10, 25, 0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,0.18);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65);
+}
+
+/* Heading */
+h1 {
+  margin: 0 0 8px;
+  font-size: 2rem;
+  text-align: center;
+  background: linear-gradient(90deg, #e7d6ff, #a6e0ff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.subtitle {
+  margin-bottom: 22px;
+  font-size: 0.95rem;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+/* Form fields */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #f4e9ff;
+}
+
+/* Inputs, Select, Textarea */
+input,
+select,
+textarea {
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.09);
+  color: var(--text-main);
+  border-radius: var(--radius-md);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Placeholder fix */
+input::placeholder,
+textarea::placeholder {
+  color: #e2d6ff;
+  opacity: 0.7;
+}
+
+/* Focus */
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 6px var(--accent-glow);
+}
+
+
+select {
+  background: rgba(20, 15, 40, 0.85) !important;
+  color: var(--text-main) !important;
+}
+
+
+select option {
+  background-color: #0d0920 !important;
+  color: #ffffff !important;
+  padding: 10px;
+}
+
+/* Style for date/time pickers */
+input[type="date"],
+input[type="time"] {
+  background: rgba(20, 15, 40, 0.85) !important;
+  color: #fff;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+/* Checkbox */
+.checkbox-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--text-main);
+}
+
+.checkbox-container input {
+  width: 18px;
+  height: 18px;
+}
+
+/* Button */
+.btn-primary {
+  width: 100%;
+  padding: 12px 18px;
+  margin-top: 12px;
+
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #d5c3ff, #9edcff);
+  color: #1f0d35;
+
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+  transition: 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.08);
+}
+
+.btn-primary:active {
+  transform: translateY(0px);
+}
+
+/* Messages */
+.form-messages {
+  min-height: 18px;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.form-messages.success { color: #a8ffb3; }
+.form-messages.error { color: var(--error); }
